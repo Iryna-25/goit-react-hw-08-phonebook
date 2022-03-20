@@ -1,8 +1,16 @@
-// App.js
-import './App.css';
+import ContactForm from './Components/ContactForm';
+import ContactList from './Components/ContactList';
+import Filter from './Components/Filter';
+import Wrapper from './wrapper.styled';
 
-function App() {
-  return <div className="App">TEST</div>;
-}
+const App = () => {
+  return (
+    <Wrapper>
+      <ContactForm />
+      <Filter />
+      <ContactList />
+    </Wrapper>
+  );
+};
 
 export default App;
