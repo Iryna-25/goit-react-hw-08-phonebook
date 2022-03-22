@@ -1,9 +1,12 @@
-import { createReducer } from "@reduxjs/toolkit";
-import { changeFilter } from "./contacts-actions";
+// import { createReducer } from "@reduxjs/toolkit";
+// import { changeFilter } from "./contacts-actions";
 
-export const filter = createReducer ('', {
-  [changeFilter]: (_, { payload }) => payload,
-});
+// export const filter = createReducer ('', {
+//   [changeFilter]: (_, { payload }) => payload,
+// });
+
+
+
 // const items = createReducer([], {
 //   [addItem]: (state, { payload }) => [...state, payload],
 //   [removeItem]: (state, { payload }) =>

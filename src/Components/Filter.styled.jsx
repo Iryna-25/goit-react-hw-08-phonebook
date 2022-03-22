@@ -14,3 +14,8 @@ export const SearchInput = styled.input`
   padding-left: 10px;
   margin-top: 10px;
 `;
+
+export const Container = styled.h2`
+  font-style: Arial;
+  font-size: 28px;
+`;
