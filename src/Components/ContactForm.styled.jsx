@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 export const Label = styled.h1`
   font-style: Arial;
-  font-size: 30px;
+  font-size: 16px;
 `;
 
 export const Form = styled.form`
@@ -9,7 +9,6 @@ export const Form = styled.form`
   margin-bottom: 50px;
   label {
     display: block;
-    margin-bottom: 20px;
     font-style: Arial;
   }
 `;
@@ -26,6 +25,7 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
+  margin: 10px 0px;
   border: 1px solid #000;
   border-radius: 7px;
   padding: 7px;

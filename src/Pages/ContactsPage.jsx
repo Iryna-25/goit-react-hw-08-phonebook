@@ -8,7 +8,7 @@ export default function ContactsPage(loading, onChangeState, onContactsGroup, on
     <>
   <ContactForm onChangeState={onChangeState} />
   {loading ? (
-    alert ("Привет")
+    alert ('Your contacts are loading...')
   ) : (
     <>
       {onContactsGroup ? (

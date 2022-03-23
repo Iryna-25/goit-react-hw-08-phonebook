@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import { IconContext } from 'react-icons';
-import { FcDeleteDatabase } from 'react-icons/fc';
 import {
   ContastsList,
   ContactItem,
@@ -39,7 +38,6 @@ export default function ContactList({ contacts, filter, onDelete }) {
                 style: { verticalAlign: 'middle' },
               }}
             >
-              <FcDeleteDatabase />
             </IconContext.Provider>
           </Button>
         </ContactItem>

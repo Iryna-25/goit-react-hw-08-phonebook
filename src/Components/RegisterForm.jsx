@@ -4,13 +4,13 @@ export default function RegisterForm() {
   return (
     <Form>
       <Label htmlFor="login">Login</Label>
-      <Input type="text" name="login" placeholder="Enter login" />
+      <Input type="text" name="login"/>
 
       <Label htmlFor="password">Password</Label>
-      <Input type="text" name="password" placeholder="Enter password" />
+      <Input type="text" name="password"/>
     
       <Label htmlFor="confirmPassword">Confirm Password</Label>
-      <Input type="text" name="confirmPassword" placeholder="Confirm password" />
+      <Input type="text" name="confirmPassword"/>
 
       <Button type="button">Sign Up</Button>
   </Form>
