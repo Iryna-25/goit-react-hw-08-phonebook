@@ -15,10 +15,10 @@ export default function Navigation() {
         <ListItem>
           <NavigationLink to="/register">Register</NavigationLink>
         </ListItem>
-{/* 
+
         <ListItem>
           <NavigationLink to="/contacts">Contacts</NavigationLink>
-        </ListItem> */}
+        </ListItem>
 
         <ListItem>
           <NavigationLink to="/logout">Log Out</NavigationLink>
