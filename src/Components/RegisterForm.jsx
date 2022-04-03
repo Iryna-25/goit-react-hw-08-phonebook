@@ -7,10 +7,10 @@ export default function RegisterForm() {
       <Input type="text" name="login"/>
 
       <Label htmlFor="password">Password</Label>
-      <Input type="text" name="password"/>
+      <Input type="password" name="password"/>
     
       <Label htmlFor="confirmPassword">Confirm Password</Label>
-      <Input type="text" name="confirmPassword"/>
+      <Input type="password" name="confirmPassword"/>
 
       <Button type="button">Sign Up</Button>
   </Form>

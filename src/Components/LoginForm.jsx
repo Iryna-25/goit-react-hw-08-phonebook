@@ -7,7 +7,7 @@ export default function LoginForm() {
       <Input type="text" name="Login" />
       
       <Label htmlFor="password">Password</Label>
-      <Input type="text" name="password" />
+      <Input type="password" name="password" />
 
       <Button type="button">Log In</Button>
     </Form>
