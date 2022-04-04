@@ -1,3 +1,3 @@
 export default function LogOutPage() {
-    return <p>Log Out</p>
+  return <p>the logout is sucsessful</p>
   };
