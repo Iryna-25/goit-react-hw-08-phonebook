@@ -2,13 +2,6 @@
 
 // export const changeFilter = createAction('filter/change');
 
-
-
-
-
-
-
-
 // const formContact = (contact) => ({
 //   payload: { ...contact, id: nanoid() },
 // });

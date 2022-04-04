@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
-
 export const Nav = styled.nav`
   padding: 5px;
   font-style: Arial;
@@ -9,7 +8,6 @@ export const Nav = styled.nav`
 `;
 
 export const NavList = styled.ul`
-
   display: flex;
   flex-wrap: wrap;
   padding-left: 10px;
@@ -23,7 +21,7 @@ export const ListItem = styled.li`
   border: 1px solid #000;
   border-radius: 7px;
   padding: 7px;
-  background-color: #4B0082;
+  background-color: #4b0082;
   color: #fff;
   &:hover {
     box-shadow: 0px 2px 1px 1px rgba(0, 0, 0, 0.15);
@@ -40,7 +38,7 @@ export const ListItem = styled.li`
   // padding-left: 10px;
 `;
 
-export const NavigationLink = styled (NavLink)`
+export const NavigationLink = styled(NavLink)`
   color: inherit;
   text-decoration: none;
   font-weight: 400;

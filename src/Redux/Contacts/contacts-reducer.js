@@ -5,8 +5,6 @@
 //   [changeFilter]: (_, { payload }) => payload,
 // });
 
-
-
 // const items = createReducer([], {
 //   [addItem]: (state, { payload }) => [...state, payload],
 //   [removeItem]: (state, { payload }) =>
