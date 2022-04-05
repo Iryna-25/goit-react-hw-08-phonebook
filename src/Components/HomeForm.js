@@ -8,7 +8,7 @@ const HomeForm = () => {
       <h2>Welcome!</h2>
       <p>Create your phone book of contacts</p>
       <p>
-        <Link to={'/signup'}>Sign Up</Link> (for new users) or <Link to={'/login'}> Log In </Link>{' '}
+        <Link to={'/register'}>Sign Up</Link> (for new users) or <Link to={'/login'}> Log In </Link>{' '}
         to get access to your contacts.
       </p>
     </>

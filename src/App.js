@@ -5,7 +5,7 @@ import HomePage from './Pages/HomePage';
 import RegisterPage from './Pages/RegisterPage';
 import LogInPage from './Pages/LogInPage';
 import ContactsPage from './Pages/ContactsPage';
-import LogOutPage from './Pages/LogOutPage';
+// import LogOutPage from './Pages/LogOutPage';
 import Layout from './Components/Navigation/layout';
 // import PrivateRoute from './Components/UserMenu/PrivateRoute';
 // import PublicRoute from './Components/UserMenu/PublicRoute';
@@ -28,11 +28,11 @@ const App = () => {
           path="/contacts"
           element={
             // <PrivateRoute>
-            <ContactsPage />
-            // </PrivateRoute>
+              <ContactsPage />
+            /* </PrivateRoute> */
           }
         />
-        <Route path="/logout" element={<LogOutPage />} />
+        {/* <Route path="/logout" element={<LogOutPage />} /> */}
         {/* <Route path="*" element={<LogInPage />} /> */}
       </Route>
     </Routes>

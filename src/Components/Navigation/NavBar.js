@@ -13,12 +13,12 @@ const NavBar = () => {
       <li>
         <Link to="/login"> Log In </Link>
       </li>
-      <li>
+      {/* <li>
         <Link to="/contacts"> Contacts </Link>
-      </li>
-      <li>
+      </li> */}
+      {/* <li>
         <Link to="/logout"> Log Out </Link>
-      </li>
+      </li> */}
     </ul>
   );
 };
