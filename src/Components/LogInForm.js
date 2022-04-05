@@ -9,10 +9,14 @@ function LogInForm() {
   // const user = useSelector(state => state.auth.user);
   // User Login info
   const database = [{
-      // username: "user1",
-      email: "test@gmail.com",
-      password: "pass1",
-    }];
+    email: "across@mail.com",
+    password: "examplepassword",
+  }];
+
+  const users = {
+    email: "across@mail.com",
+    password: "examplepassword",
+  };
 
   const errors = {
     // uname: "invalid username",
@@ -83,8 +87,8 @@ function LogInForm() {
         <div className="title"> Authorization </div>
         {isSubmitted ?
           <div>
-            <p>Authorization is successfull! Hello, </p>
-            <p> Please create phone book here. </p>
+            <p>Authorization is successfull! Hello, {users.email} </p>
+            <p> Please create phone book follow the link bellow. </p>
             <p>
               <Link to={'/contacts'}> <button> My phonebook </button> </Link>
             </p>

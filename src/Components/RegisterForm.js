@@ -8,18 +8,22 @@ function RegisterForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   // const user = useSelector(state => state.auth.user);
   // User Login info
-  const database = [
-    {
-      username: "user1",
-      email: "test@gmail.com",
-      password: "pass1",
-    }
-  ];
+  const database = [{
+    name: "Adrian Cross",
+    email: "across@mail.com",
+    password: "examplepassword",
+  }];
+
+  const users = {
+    name: "Adrian Cross",
+    email: "across@mail.com",
+    password: "examplepassword",
+  };
 
   const errors = {
     uname: "invalid username",
     email: "invalid email",
-    pass: "invalid password"
+    pass: "invalid password",
   };
 
   const handleSubmit = (event) => {
@@ -29,7 +33,7 @@ function RegisterForm() {
     var { uname, pass, email } = document.forms[0];
 
     // Find user login info
-    const userData = database.find((user) => user.username === uname.value);
+    const userData = database.find((user) => user.name === uname.value);
 
     // Compare user info
     if (userData) {
@@ -88,8 +92,8 @@ function RegisterForm() {
         <div className="title"> Registration </div>
         {isSubmitted ?
           <div>
-            <p>You are registred! Nice to see you, </p>
-            <p> Please create phone book here. </p>
+            <p>You are registred! Nice to see you, {users.email} </p>
+            <p> Please create phone book follow the link bellow. </p>
             <p>
               <Link to={'/contacts'}> <button> My phonebook </button> </Link>
             </p>
