@@ -10,7 +10,6 @@ import {
   REGISTER,
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
-import { todosReducer } from "./todos";
 import { authReducer } from "./auth";
 
 const middleware = [
@@ -30,10 +29,30 @@ const authPersistConfig = {
 export const store = configureStore({
   reducer: {
     auth: persistReducer(authPersistConfig, authReducer),
-    todos: todosReducer,
   },
   middleware,
   devTools: process.env.NODE_ENV === "development",
 });
 
 export const persistor = persistStore(store);
+
+
+
+////////////////////////////////////
+// import { configureStore } from '@reduxjs/toolkit';
+// import { contactsApi } from '../components/API/contacts.API';
+// import { filter } from './contacts/contacts-reducer';
+
+// export const store = configureStore({
+//   reducer: {
+//     filter,
+//     [contactsApi.reducerPath]: contactsApi.reducer,
+//   },
+
+//   middleware: getDefaultMiddleware => [
+//     ...getDefaultMiddleware(),
+//     contactsApi.middleware,
+//   ],
+//   devTools: process.env.NODE_ENV === 'development',
+// });
+/////////////////////////////////////
