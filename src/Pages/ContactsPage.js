@@ -1,22 +1,16 @@
-import React from 'react';
-import ContactsForm from '../Components/ContactsForm';
-import Filter from '../Components/Filter';
-import ContactList from '../Components/ContactsList';
+import React from "react";
+import ContactsForm from "../components/Contacts/ContactsForm/ContactsForm";
+import Filter from "../components/Contacts/Filter/Filter";
+// import ContactList from "../components/Contacts/ContactsList/ContactsList";
 
-import { Link } from 'react-router-dom';
-
-
-import Wrapper from '../Components/wrapper.styled';
+import Wrapper from "../components/wrapper.styled";
 
 const ContactsPage = () => {
   return (
     <Wrapper>
-      <p>
-        <Link to={'/'}> <button> Log Out </button> </Link>
-      </p>
       <ContactsForm />
       <Filter />
-      <ContactList />
+      {/* <ContactsList /> */}
     </Wrapper>
   );
 };

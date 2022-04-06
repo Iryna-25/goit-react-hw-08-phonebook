@@ -1,42 +1,73 @@
-import React from 'react'; // { useRef, useState }
-// import { useDispatch, useSelector } from 'react-redux';
-import { Routes, Route } from 'react-router-dom';
-import HomePage from './Pages/HomePage';
-import RegisterPage from './Pages/RegisterPage';
-import LogInPage from './Pages/LogInPage';
-import ContactsPage from './Pages/ContactsPage';
-// import LogOutPage from './Pages/LogOutPage';
-import Layout from './Components/Navigation/layout';
-// import PrivateRoute from './Components/UserMenu/PrivateRoute';
-// import PublicRoute from './Components/UserMenu/PublicRoute';
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { Routes, Route } from "react-router-dom";
+import AppBar from "./components/AppBar";
+import ContactsPage from "./Pages/ContactsPage";
+import Container from "./components/Container";
+import { authOperations } from "./redux/auth";
+import PrivateRoute from "./components/PrivateRoute";
+import PublicRoute from "./components/PublicRoute";
+import HomePage from "./Pages/HomePage";
+import RegisterPage from "./Pages/RegisterPage";
+import LoginPage from "./Pages/LoginPage";
 
-const App = () => {
+// const HomeView = lazy(() => import('./views/HomeView'));
+// const RegisterView = lazy(() => import('./views/RegisterView'));
+// const LoginView = lazy(() => import('./views/LoginView'));
+// const ContactsView = lazy(() => import('./views/ContactsView'));
+
+export default function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(authOperations.fetchCurrentUser());
+  }, [dispatch]);
+
   return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/register" element={<RegisterPage />} />
+    <Container>
+      <AppBar />
+
+      <Routes>
         <Route
+          exact
+          path="/"
+          element={
+            <PublicRoute restricted>
+              <HomePage />
+            </PublicRoute>
+          }
+        />
+
+        <Route
+          exact
+          path="/register"
+          element={
+            <PublicRoute restricted>
+              <RegisterPage />
+            </PublicRoute>
+          }
+        />
+
+        <Route
+          exact
           path="/login"
           element={
-            // <PublicRoute restricted>
-            <LogInPage />
-            // </PublicRoute>
+            <PublicRoute restricted>
+              <LoginPage />
+            </PublicRoute>
           }
         />
+
         <Route
+          exact
           path="/contacts"
           element={
-            // <PrivateRoute>
+            <PrivateRoute restricted>
               <ContactsPage />
-            /* </PrivateRoute> */
+            </PrivateRoute>
           }
         />
-        {/* <Route path="/logout" element={<LogOutPage />} /> */}
-        {/* <Route path="*" element={<LogInPage />} /> */}
-      </Route>
-    </Routes>
+      </Routes>
+    </Container>
   );
-};
-
-export default App;
+}
