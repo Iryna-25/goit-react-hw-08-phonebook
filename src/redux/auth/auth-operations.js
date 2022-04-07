@@ -1,25 +1,24 @@
-import axios from "axios";
-import { createAsyncThunk } from "@reduxjs/toolkit";
+import axios from 'axios';
+import { createAsyncThunk } from '@reduxjs/toolkit';
 
-axios.defaults.baseURL = "https://connections-api.herokuapp.com";
+axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
 
 const token = {
   set(token) {
     axios.defaults.headers.common.Authorization = `Bearer ${token}`;
   },
   unset() {
-    axios.defaults.headers.common.Authorization = "";
+    axios.defaults.headers.common.Authorization = '';
   },
 };
-
 /*
  * POST @ /users/signup
  * body: { name, email, password }
  * После успешной регистрации добавляем токен в HTTP-заголовок
  */
-const register = createAsyncThunk("auth/register", async (credentials) => {
+const register = createAsyncThunk('auth/register', async credentials => {
   try {
-    const { data } = await axios.post("/users/signup", credentials);
+    const { data } = await axios.post('/users/signup', credentials);
     token.set(data.token);
     return data;
   } catch (error) {
@@ -32,9 +31,9 @@ const register = createAsyncThunk("auth/register", async (credentials) => {
  * body: { email, password }
  * После успешного логина добавляем токен в HTTP-заголовок
  */
-const logIn = createAsyncThunk("auth/login", async (credentials) => {
+const logIn = createAsyncThunk('auth/login', async credentials => {
   try {
-    const { data } = await axios.post("/users/login", credentials);
+    const { data } = await axios.post('/users/login', credentials);
     token.set(data.token);
     return data;
   } catch (error) {
@@ -47,9 +46,9 @@ const logIn = createAsyncThunk("auth/login", async (credentials) => {
  * headers: Authorization: Bearer token
  * После успешного логаута, удаляем токен из HTTP-заголовка
  */
-const logOut = createAsyncThunk("auth/logout", async () => {
+const logOut = createAsyncThunk('auth/logout', async () => {
   try {
-    await axios.post("/users/logout");
+    await axios.post('/users/logout');
     token.unset();
   } catch (error) {
     // TODO: Добавить обработку ошибки error.message
@@ -65,24 +64,23 @@ const logOut = createAsyncThunk("auth/logout", async () => {
  * 3. Если токен есть, добавляет его в HTTP-заголовок и выполянем операцию
  */
 const fetchCurrentUser = createAsyncThunk(
-  "auth/refresh",
+  'auth/refresh',
   async (_, thunkAPI) => {
     const state = thunkAPI.getState();
     const persistedToken = state.auth.token;
 
     if (persistedToken === null) {
-      console.log("Токена нет, уходим из fetchCurrentUser");
       return thunkAPI.rejectWithValue();
     }
 
     token.set(persistedToken);
     try {
-      const { data } = await axios.get("/users/current");
+      const { data } = await axios.get('/users/current');
       return data;
     } catch (error) {
       // TODO: Добавить обработку ошибки error.message
     }
-  }
+  },
 );
 
 const operations = {
