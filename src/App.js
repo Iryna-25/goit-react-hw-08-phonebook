@@ -2,14 +2,15 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Routes, Route } from "react-router-dom";
 import AppBar from "./components/AppBar";
-import ContactsPage from "./Pages/ContactsPage";
+import HomePage from "./pages/HomePage";
+import RegisterPage from "./pages/RegisterPage";
+import LoginPage from "./pages/LoginPage";
+import ContactsPage from "./pages/ContactsPage";
 import Container from "./components/Container";
 import { authOperations } from "./redux/auth";
 import PrivateRoute from "./components/PrivateRoute";
 import PublicRoute from "./components/PublicRoute";
-import HomePage from "./Pages/HomePage";
-import RegisterPage from "./Pages/RegisterPage";
-import LoginPage from "./Pages/LoginPage";
+
 
 // const HomeView = lazy(() => import('./views/HomeView'));
 // const RegisterView = lazy(() => import('./views/RegisterView'));
