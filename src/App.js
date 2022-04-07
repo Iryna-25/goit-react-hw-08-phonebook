@@ -8,7 +8,7 @@ import LoginPage from "./pages/LoginPage";
 import ContactsPage from "./pages/ContactsPage";
 import Container from "./components/Container";
 import { authOperations } from "./redux/auth";
-import PrivateRoute from "./components/PrivateRoute";
+import PrivateRoute from "./components/PrivateRoute"; 
 import PublicRoute from "./components/PublicRoute";
 
 export default function App() {
