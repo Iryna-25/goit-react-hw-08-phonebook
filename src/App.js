@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+// import { useEffect } from "react";
+// import { useDispatch } from "react-redux";
 import { Routes, Route } from "react-router-dom";
 import AppBar from "./components/AppBar";
 import HomePage from "./pages/HomePage";
@@ -7,21 +7,16 @@ import RegisterPage from "./pages/RegisterPage";
 import LoginPage from "./pages/LoginPage";
 import ContactsPage from "./pages/ContactsPage";
 import Container from "./components/Container";
-import { authOperations } from "./redux/auth";
+// import { authOperations } from "./redux/auth";
 import PrivateRoute from "./components/PrivateRoute";
 import PublicRoute from "./components/PublicRoute";
 
-// const HomeView = lazy(() => import('./views/HomeView'));
-// const RegisterView = lazy(() => import('./views/RegisterView'));
-// const LoginView = lazy(() => import('./views/LoginView'));
-// const ContactsView = lazy(() => import('./views/ContactsView'));
-
 export default function App() {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(authOperations.fetchCurrentUser());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(authOperations.fetchCurrentUser());
+  // }, [dispatch]);
 
   return (
     <Container>
