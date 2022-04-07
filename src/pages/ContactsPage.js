@@ -1,7 +1,7 @@
 import React from "react";
 import ContactsForm from "../components/Contacts/ContactsForm/ContactsForm";
 import Filter from "../components/Contacts/Filter/Filter";
-// import ContactList from "../components/Contacts/ContactsList/ContactsList";
+import ContactsList from "../components/Contacts/ContactsList";
 
 import Wrapper from "../components/wrapper.styled";
 
@@ -10,7 +10,7 @@ const ContactsPage = () => {
     <Wrapper>
       <ContactsForm />
       <Filter />
-      {/* <ContactsList /> */}
+      <ContactsList />
     </Wrapper>
   );
 };
