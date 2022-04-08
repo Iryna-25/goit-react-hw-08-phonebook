@@ -15,8 +15,6 @@ import {
   fetchContactsError,
 } from './contacts-actions';
 
-// import initialContacts from '../../Phonebook/contacts.json';
-
 const contacts = createReducer([],
   // initialContacts,
   {

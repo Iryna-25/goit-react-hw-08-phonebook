@@ -9,7 +9,7 @@ import {
     fetchContactsRequest,
     fetchContactsSuccess,
     fetchContactsError,
-} from './phone-book-actions';
+} from './contacts-actions';
 
 // axios.defaults.baseURL = 'https://6203af0f4d21c200170b9f5a.mockapi.io/api/v1/';
 // axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
